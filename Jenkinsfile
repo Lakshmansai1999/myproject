@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t lucky-app .'
+                sh 'sudo docker build -t lucky-app .'
             }
         }
 
         stage('Run Docker Container') {
             steps {
-                sh 'docker run --rm lucky-app'
+                sh 'sudo docker run --rm lucky-app'
             }
         }
     }
